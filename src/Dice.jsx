@@ -16,11 +16,11 @@ const DICE_IMAGES = {
   red: [diceRed01, diceRed02, diceRed03, diceRed04, diceRed05, diceRed06],
 };
 
-function Dice({ color = 'purple', num = 1 }) {
+function Dice({ color = 'purple', num = 1, onClick}) {
   const src = DICE_IMAGES[color][num - 1];
   const alt = `${color} ${num}`;
 
-  return <img src={src} alt={alt} />;
+  return <img src={src} alt={alt} onClick = {onClick}/>;
 }
 
 export default Dice;
